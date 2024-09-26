@@ -56,12 +56,25 @@ The server should now be running on http://localhost:3001.
 ## Testing the Project
 The project uses Jest and Supertest for testing. You can run the tests by following these steps:
 
-Run all tests:
+1. Run all tests:
 
 ```bash
 
 npm run test
 ```
+2. Generate a test coverage report:
+
+```bash
+
+npm run test -- --coverage
+```
+## Viewing the Test Report
+After running the command above, Jest will generate a detailed test report inside the coverage/ folder.
+
+- To view the report:
+- Open the coverage/ folder.
+- Inside the folder, open the index.html file in your browser to view a detailed HTML report.
+- The report will provide insights into test coverage, including which lines of code are covered by tests.
 
 ## API Endpoints
 - POST /books: Add a new book to the library.
