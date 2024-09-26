@@ -1,4 +1,4 @@
-const { Book, Library } = require('../model/bookModel');
+const { Book, Library } = require('../Model/bookModel');
 
 describe('Book Model', () => {
   it('should create a new Book with correct properties', () => {
