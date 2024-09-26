@@ -1,0 +1,25 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "Incubyte Problem solution",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atharvajk/library-management-system.git"
+  },
+  "author": "AtharvaKhodke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atharvajk/library-management-system/issues"
+  },
+  "homepage": "https://github.com/Atharvajk/library-management-system#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
