@@ -1,6 +1,7 @@
-# Library Management System
+# Kata Library Management System
 
-This project is a simple **Library Management System** built using **Node.js** and **Express.js**. It allows users to perform basic operations such as adding books, borrowing books, returning books, and viewing available books.
+This project is a simple **Library Management System** built using **Node.js** and **Express.js** as an solution to problem statement provided by Incubyte.
+It allows users to perform basic operations such as adding books, borrowing books, returning books, and viewing available books.
 
 ## Features
 
