@@ -16,5 +16,23 @@ class Book {
         addBook(book) {
             this.books.push(book);
           }
+           // Borrows a book if available
+    borrowBook(isbn) {
+        const book = this.books.find((b) => b.isbn === isbn && b.isAvailable);
+        book.isAvailable = false; // Mark the book as not available
+      }
+    
+      // Returns a borrowed book
+      returnBook(isbn) {
+        const book = this.books.find((b) => b.isbn === isbn);
+        book.isAvailable = true; // Mark the book as available
+      }
+    
+      // Returns a list of available books
+      viewAvailableBooks() {
+        return this.books.filter((b) => b.isAvailable); // Returns only the books that are available
+      }
         
 }
+  
+module.exports = { Book, Library };
