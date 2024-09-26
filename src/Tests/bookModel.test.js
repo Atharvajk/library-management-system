@@ -32,6 +32,13 @@ describe('Library Model', () => {
     expect(library.books[0].isAvailable).toBe(false);
   });
 
+  it('should throw an error when borrowing an unavailable book', () => {
+    const book = new Book('1234', 'Clean Code', 'Robert C. Martin', 2008);
+    library.addBook(book);
+    library.borrowBook('1234');
+    
+    expect(() => library.borrowBook('1234')).toThrow('Book not available');
+  });
 
   it('should return a borrowed book', () => {
     const book = new Book('1234', 'Clean Code', 'Robert C. Martin', 2008);
@@ -42,6 +49,9 @@ describe('Library Model', () => {
     expect(library.books[0].isAvailable).toBe(true);
   });
 
+  it('should throw an error when returning a non-existent book', () => {
+    expect(() => library.returnBook('9999')).toThrow('Book not found');
+  });
 
   it('should view all available books', () => {
     const book1 = new Book('1234', 'Clean Code', 'Robert C. Martin', 2008);
@@ -57,3 +67,4 @@ describe('Library Model', () => {
     expect(availableBooks[0].isbn).toBe('5678');
   });
 });
+ 
