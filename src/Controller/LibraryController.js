@@ -15,16 +15,22 @@ const addBook = (req, res) => {
 
 const borrowBook = (req, res) => {
   const { isbn } = req.params;
+  try {
     library.borrowBook(isbn);
     res.send({ message: 'Book borrowed successfully' });
-
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
 };
 
 const returnBook = (req, res) => {
   const { isbn } = req.params;
+  try {
     library.returnBook(isbn);
     res.send({ message: 'Book returned successfully' });
-
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
 };
 
 const viewAvailableBooks = (req, res) => {
