@@ -16,7 +16,9 @@ app.put('/books/return/:isbn', returnBook);
 app.get('/books', viewAvailableBooks);
 
 // Server setup
-app.listen((3000), () => {
-    console.log("Server is Running");
-})
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(3001, () => {
+      console.log("Server is Running");
+    });
+  }
 module.exports = app;
